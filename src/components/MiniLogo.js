@@ -21,9 +21,7 @@ const style = StyleSheet.create({
     fontFamily: "Montserrat-Bold",
     fontSize: 28,
     color: "#F5F5F5",
+    paddingLeft: "5%",
     marginRight: 5,
-  },
-  bookIcon: {
-    // Estilos para o ícone do livro
   },
 });

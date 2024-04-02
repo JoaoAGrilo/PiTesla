@@ -9,11 +9,11 @@ export default () => {
         <View style={style.App}>
             <MiniLogo />
             <SvgWelcomeArt style={style.WelcomeArt}/>
-            <Fragment style={style.textContainer}>
+            <View style={style.textContainer}>
                 <Text style={style.mainText}>Educação</Text>
                 <Text style={style.subText}>Estude de maneira mais prática{"\n"}e eficiente.</Text>
                 <WelcomeButtons style={style.buttons}/>
-            </Fragment>
+            </View>
         </View>
     )
 }
@@ -21,7 +21,7 @@ export default () => {
 const style = StyleSheet.create({
     App: {
         backgroundColor: "#006BFF",
-        flexGrow: 1,
+        flex: 1,
         paddingTop: "4%",
         paddingLeft: "10%",
         paddingRight: "10%"
