@@ -1,37 +1,24 @@
-import React, { Fragment } from "react";
-import { View, Text, StyleSheet } from "react-native"
-import MiniLogo from "./components/MiniLogo";
-import StudentLoginButtons from "./components/StudentLoginForm";
-import SvgHeaderWave1 from "../assets/svg/SvgHeaderWave1";
+import React from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import welcome from "./views/welcome";
+import studentLogin from "./views/studentLogin";
+import studentRegister from "./views/studentRegister";
 
 export default () => {
+
+    const Stack = createNativeStackNavigator()
+
     return (
-        <View style={style.App}>
-            <MiniLogo />
-            <SvgHeaderWave1 />
-            <Text style={style.mainText}>Bem-vindo{"\n"}de volta!</Text>
-            <StudentLoginButtons style={style.buttons}/>
-        </View>
+        <NavigationContainer>
+            <Stack.Navigator 
+            initialRouteName="Welcome"
+            screenOptions={{headerShown: false}}>
+                <Stack.Screen name="Welcome" component={welcome} />
+                <Stack.Screen name="StudentLogin" component={studentLogin} />
+                <Stack.Screen name="StudentRegister" component={studentRegister} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
-
-const style = StyleSheet.create({
-    App: {
-        backgroundColor: "#F5F5F5",
-        flexGrow: 1,
-        paddingTop: "4%",
-    },
-
-    mainText: {
-        fontSize: 32,
-        fontFamily: "Montserrat-Bold",
-        color: "#F5F5F5",
-        marginTop: 88,
-        marginLeft: "10%",
-    },
-
-    buttons: {
-        alignSelf: "center",
-        width: "80%",
-    }
-})

@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native"
-import MiniLogo from "./components/MiniLogo";
-import SvgWelcomeArt from "../assets/svg/SvgWelcomeArt"
-import WelcomeButtons from "./components/WelcomeButtons";
+import MiniLogo from "../components/MiniLogo";
+import SvgWelcomeArt from "../../assets/svg/SvgWelcomeArt";
+import WelcomeButtons from "../components/WelcomeButtons";
 
-export default () => {
+export default props => {
     return (
         <View style={style.App}>
             <MiniLogo />
@@ -12,7 +12,7 @@ export default () => {
             <View style={style.textContainer}>
                 <Text style={style.mainText}>Educação</Text>
                 <Text style={style.subText}>Estude de maneira mais prática{"\n"}e eficiente.</Text>
-                <WelcomeButtons style={style.buttons}/>
+                <WelcomeButtons navigation = {props.navigation}/>
             </View>
         </View>
     )

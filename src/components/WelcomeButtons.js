@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
-export default () => {
+export default props => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate("StudentLogin")}>
                 <Text style={styles.buttonText}>Sou aluno</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.button, styles.buttonTeacher]}>

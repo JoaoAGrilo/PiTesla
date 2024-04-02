@@ -4,13 +4,25 @@ import SvgMailIcon from '../../assets/svg/SvgMailIcon'
 import SvgCheckIcon from '../../assets/svg/SvgCheckIcon'
 import SvgLockIcon from '../../assets/svg/SvgLockIcon'
 import SvgHideIcon from '../../assets/svg/SvgHideIcon'
+import SvgUserIcon from '../../assets/svg/SvgUserIcon'
+import SvgHashIcon from '../../assets/svg/SvgHashIcon'
 
-export default props => {
+export default () => {
     return (
         <View style={style.container}>
             <View style={style.inputContainer}>
+                <SvgUserIcon />
+                <TextInput  placeholder=" Nome"  style={style.textInput}/>
+                <SvgCheckIcon />
+            </View>
+            <View style={style.inputContainer}>
                 <SvgMailIcon />
                 <TextInput  placeholder=" Email"  style={style.textInput}/>
+                <SvgCheckIcon />
+            </View>
+            <View style={style.inputContainer}>
+                <SvgHashIcon />
+                <TextInput  placeholder=" Matrícula"  style={style.textInput}/>
                 <SvgCheckIcon />
             </View>
             <View style={style.inputContainer}>
@@ -20,10 +32,10 @@ export default props => {
             </View>
             <View style={style.buttonsContainer}>
                 <TouchableOpacity style={style.button}>
-                    <Text style={style.buttonText}>Entrar</Text>
+                    <Text style={style.buttonText}>Continuar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[style.button, style.registerButton]}>
-                    <Text style={[style.buttonText, style.registerButtonText]} onPress={() => props.navigation.navigate("StudentRegister")}>Cadastre-se</Text>
+                    <Text style={[style.buttonText, style.registerButtonText]}>Já tenho uma conta</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -35,7 +47,7 @@ const style = StyleSheet.create({
         width: "80%",
         alignSelf: "center",
         alignItems: "center",
-        paddingTop: "50%"
+        paddingTop: "25%"
     },
 
     inputContainer: {
@@ -53,7 +65,7 @@ const style = StyleSheet.create({
     },
 
     buttonsContainer: {
-        paddingTop: "12%"
+        paddingTop: "4%"
     },
 
     button: {
@@ -74,6 +86,7 @@ const style = StyleSheet.create({
     },
 
     registerButton: {
+        fontSize: 15,
         backgroundColor: "#F5F5F5",
         borderWidth: 1,
         borderColor: "#006BFF"
