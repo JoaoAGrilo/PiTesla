@@ -1,16 +1,16 @@
 import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native"
 import StudentRegisterForm from "../components/StudentRegisterForm";
-import SvgHeaderWave1 from "../../assets/svg/SvgHeaderWave1";
+import SvgHeaderWave2 from "../../assets/svg/SvgHeaderWave2";
 import MiniLogo from "../components/MiniLogo";
 
-export default () => {
+export default props => {
     return (
         <View style={style.App}>
             <MiniLogo />
-            <SvgHeaderWave1 />
+            <SvgHeaderWave2 />
             <Text style={style.mainText}>Crie{"\n"}uma conta</Text>
-            <StudentRegisterForm />
+            <StudentRegisterForm navigation = {props.navigation}/>
         </View>
     )
 }

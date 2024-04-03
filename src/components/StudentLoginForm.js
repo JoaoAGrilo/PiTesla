@@ -19,11 +19,11 @@ export default props => {
                 <SvgHideIcon />
             </View>
             <View style={style.buttonsContainer}>
-                <TouchableOpacity style={style.button}>
+                <TouchableOpacity style={style.button} onPress={() => props.navigation.navigate("StudentHome")}>
                     <Text style={style.buttonText}>Entrar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[style.button, style.registerButton]}>
-                    <Text style={[style.buttonText, style.registerButtonText]} onPress={() => props.navigation.navigate("StudentRegister")}>Cadastre-se</Text>
+                <TouchableOpacity style={[style.button, style.registerButton]}  onPress={() => props.navigation.navigate("StudentRegister")} >
+                    <Text style={[style.buttonText, style.registerButtonText]}>Cadastre-se</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -76,7 +76,8 @@ const style = StyleSheet.create({
     registerButton: {
         backgroundColor: "#F5F5F5",
         borderWidth: 1,
-        borderColor: "#006BFF"
+        borderColor: "#006BFF",
+        alignItems: "center"
 
     },
 

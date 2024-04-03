@@ -7,7 +7,7 @@ export default props => {
             <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate("StudentLogin")}>
                 <Text style={styles.buttonText}>Sou aluno</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.button, styles.buttonTeacher]}>
+            <TouchableOpacity style={[styles.button, styles.buttonTeacher]} onPress={() => props.navigation.navigate("StudentLogin")}>
                 <Text style={[styles.buttonText, styles.buttonTextTeacher]}>Sou professor</Text>
             </TouchableOpacity>
         </View>

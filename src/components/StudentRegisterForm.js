@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Pressable } from 'react-native'
 import SvgMailIcon from '../../assets/svg/SvgMailIcon'
 import SvgCheckIcon from '../../assets/svg/SvgCheckIcon'
 import SvgLockIcon from '../../assets/svg/SvgLockIcon'
@@ -7,7 +7,7 @@ import SvgHideIcon from '../../assets/svg/SvgHideIcon'
 import SvgUserIcon from '../../assets/svg/SvgUserIcon'
 import SvgHashIcon from '../../assets/svg/SvgHashIcon'
 
-export default () => {
+export default props => {
     return (
         <View style={style.container}>
             <View style={style.inputContainer}>
@@ -31,12 +31,14 @@ export default () => {
                 <SvgHideIcon />
             </View>
             <View style={style.buttonsContainer}>
-                <TouchableOpacity style={style.button}>
+                <TouchableOpacity style={style.button} onPress={() => props.navigation.navigate("SubjectPicker")}>
                     <Text style={style.buttonText}>Continuar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[style.button, style.registerButton]}>
-                    <Text style={[style.buttonText, style.registerButtonText]}>Já tenho uma conta</Text>
+                <TouchableOpacity style={style.registerButton} onPress={() => props.navigation.navigate("StudentLogin")}>
+                    <Text style={style.registerText}>Já tem uma conta?</Text>
+                    <Text style={[style.registerText, style.blueRegisterText]}>Conectar-se</Text>
                 </TouchableOpacity>
+
             </View>
         </View>
     )
@@ -86,14 +88,15 @@ const style = StyleSheet.create({
     },
 
     registerButton: {
-        fontSize: 15,
-        backgroundColor: "#F5F5F5",
-        borderWidth: 1,
-        borderColor: "#006BFF"
-
+        alignItems: "center"
     },
 
-    registerButtonText: {
-        color: '#006BFF',
+    registerText: {
+        fontSize: 12,
+        fontFamily: "Montserrat-Bold",
+    },
+
+    blueRegisterText: {
+        color: "#006BFF"
     },
 })

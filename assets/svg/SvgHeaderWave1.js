@@ -7,20 +7,20 @@ const deviceWidth = Dimensions.get('window').width;
 const SvgHeaderWave1 = (props) => (
   <View style={style.container}>
     <View style={style.headerSquare}/>
-      <Svg style={style.headerWave}
-      xmlns="http://www.w3.org/2000/svg"
-      width={deviceWidth+4}
-      height={301}
-      fill="none"
-      {...props}
-    >
-      <Path
-        fill="#006BFF"
-        fillRule="evenodd"
-        d="m-162 77.165 32.591 25.085c31.539 26.48 95.669 76.652 159.799 83.62 64.13 6.969 128.26-32.054 192.389-39.022 64.13-5.575 129.312 19.511 193.442 58.534 64.129 37.629 128.259 89.194 192.389 94.769 64.13 6.968 128.26-30.661 159.799-50.172L801 230.468V.513h-963v76.651Z"
-        clipRule="evenodd"
-      />
-    </Svg>
+    <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={deviceWidth+4}
+    height={314}
+    fill="none"
+    {...props}
+  >
+    <Path
+      fill="#006BFF"
+      fillRule="evenodd"
+      d="m-178 107.873 26.895 17.979c27.71 17.979 81.5 53.937 136.105 53.937 54.605 0 108.395-35.958 163-41.951 54.605-5.993 108.395 17.979 163 41.951 54.605 23.972 108.395 47.944 163 77.909 54.605 29.964 108.395 65.922 163 53.936 54.605-11.986 108.395-71.915 136.105-101.88L800 179.789V0h-978v107.873Z"
+      clipRule="evenodd"
+    />
+  </Svg>
   </View>
   
 )
@@ -28,7 +28,7 @@ const SvgHeaderWave1 = (props) => (
 const style = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 0,
+    top: -1,
     left: 0,
     right: 0,
     bottom: 0,
