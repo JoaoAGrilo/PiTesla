@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import { View, Text, TouchableOpacity, TextInput, StyleSheet, Pressable } from 'react-native'
-import SvgMailIcon from '../../assets/svg/SvgMailIcon'
-import SvgCheckIcon from '../../assets/svg/SvgCheckIcon'
-import SvgLockIcon from '../../assets/svg/SvgLockIcon'
-import SvgHideIcon from '../../assets/svg/SvgHideIcon'
-import SvgUserIcon from '../../assets/svg/SvgUserIcon'
-import SvgHashIcon from '../../assets/svg/SvgHashIcon'
+import SvgMailIcon from '../../assets/svg/icons/SvgMailIcon'
+import SvgCheckIcon from '../../assets/svg/icons/SvgCheckIcon'
+import SvgLockIcon from '../../assets/svg/icons/SvgLockIcon'
+import SvgHideIcon from '../../assets/svg/icons/SvgHideIcon'
+import SvgUserIcon from '../../assets/svg/icons/SvgUserIcon'
+import SvgHashIcon from '../../assets/svg/icons/SvgHashIcon'
 
 export default props => {
     return (

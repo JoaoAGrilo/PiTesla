@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import SvgBookIcon from "../../assets/svg/SvgBookIcon"; // Certifique-se de importar o ícone corretamente
+import SvgBookIcon from "../../assets/svg/icons/SvgBookIcon"; // Certifique-se de importar o ícone corretamente
 
 export default () => {
   return (
