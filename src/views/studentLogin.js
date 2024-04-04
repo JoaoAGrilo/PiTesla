@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native"
 import StudentLoginForm from "../components/StudentLoginForm";
 import MiniLogo from "../components/MiniLogo";
-import SvgHeaderWave1 from "../../assets/svg/SvgHeaderWave1";
+import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
 
 export default props => {
     return (

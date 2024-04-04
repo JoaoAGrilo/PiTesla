@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native"
 import MiniLogo from "../components/MiniLogo";
-import SvgWelcomeArt from "../../assets/svg/SvgWelcomeArt";
+import SvgWelcomeArt from "../../assets/svg/arts/SvgWelcomeArt";
 import WelcomeButtons from "../components/WelcomeButtons";
 
 export default props => {

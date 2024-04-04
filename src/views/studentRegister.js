@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { View, Text, StyleSheet } from "react-native"
 import StudentRegisterForm from "../components/StudentRegisterForm";
-import SvgHeaderWave2 from "../../assets/svg/SvgHeaderWave2";
+import SvgHeaderWave2 from "../../assets/svg/patterns/SvgHeaderWave2";
 import MiniLogo from "../components/MiniLogo";
 
 export default props => {
@@ -10,7 +10,7 @@ export default props => {
             <MiniLogo />
             <SvgHeaderWave2 />
             <Text style={style.mainText}>Crie{"\n"}uma conta</Text>
-            <StudentRegisterForm navigation = {props.navigation}/>
+            <StudentRegisterForm navigation = {props.navigation} />
         </View>
     )
 }
@@ -33,5 +33,7 @@ const style = StyleSheet.create({
     buttons: {
         alignSelf: "center",
         width: "80%",
-    }
+    },
+
+
 })
