@@ -1,17 +1,17 @@
 import React, { Fragment } from "react";
-import { View, Text, StyleSheet } from "react-native"
+import {  Text, StyleSheet, SafeAreaView } from "react-native"
 import StudentLoginForm from "../components/StudentLoginForm";
 import MiniLogo from "../components/MiniLogo";
 import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
 
 export default props => {
     return (
-        <View style={style.App}>
+        <SafeAreaView style={style.App}>
             <MiniLogo />
             <SvgHeaderWave1 />
             <Text style={style.mainText}>Bem-vindo{"\n"}de volta!</Text>
             <StudentLoginForm navigation = {props.navigation}/>
-        </View>
+        </SafeAreaView>
     )
 }
 

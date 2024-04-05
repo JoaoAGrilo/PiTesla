@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native"
+import { View, SafeAreaView, Text } from "react-native"
 
 export default props => {
     return (
-        <View>
+        <SafeAreaView>
             <Text>Tela inicial do aluno</Text>
             <Text>Tela inicial do aluno</Text>
             <Text>Tela inicial do aluno</Text>
             <Text>Tela inicial do aluno</Text>
-        </View>
+        </SafeAreaView>
     )
 }

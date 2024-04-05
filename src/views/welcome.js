@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import { View, Text, StyleSheet } from "react-native"
+import { View, SafeAreaView, Text, StyleSheet } from "react-native"
 import MiniLogo from "../components/MiniLogo";
 import SvgWelcomeArt from "../../assets/svg/arts/SvgWelcomeArt";
 import WelcomeButtons from "../components/WelcomeButtons";
 
 export default props => {
     return (
-        <View style={style.App}>
+        <SafeAreaView style={style.App}>
             <MiniLogo />
             <SvgWelcomeArt style={style.WelcomeArt}/>
             <View style={style.textContainer}>
@@ -14,7 +14,7 @@ export default props => {
                 <Text style={style.subText}>Estude de maneira mais prática{"\n"}e eficiente.</Text>
                 <WelcomeButtons navigation = {props.navigation}/>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -23,13 +23,16 @@ const style = StyleSheet.create({
         backgroundColor: "#006BFF",
         flex: 1,
         paddingTop: "4%",
-        paddingLeft: "10%",
-        paddingRight: "10%"
     },
 
     WelcomeArt: {
         alignSelf: "center",
         marginTop: 120,
+    },
+
+    textContainer: {
+        marginLeft: "10%",
+        marginRight: "10%"
     },
 
     mainText: {

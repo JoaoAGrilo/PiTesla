@@ -1,17 +1,17 @@
 import React, { Fragment } from "react";
-import { View, Text, StyleSheet } from "react-native"
+import { SafeAreaView, Text, StyleSheet } from "react-native"
 import StudentRegisterForm from "../components/StudentRegisterForm";
 import SvgHeaderWave2 from "../../assets/svg/patterns/SvgHeaderWave2";
 import MiniLogo from "../components/MiniLogo";
 
 export default props => {
     return (
-        <View style={style.App}>
+        <SafeAreaView style={style.App}>
             <MiniLogo />
             <SvgHeaderWave2 />
             <Text style={style.mainText}>Crie{"\n"}uma conta</Text>
             <StudentRegisterForm navigation = {props.navigation} />
-        </View>
+        </SafeAreaView>
     )
 }
 

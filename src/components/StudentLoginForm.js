@@ -35,7 +35,7 @@ const style = StyleSheet.create({
         width: "80%",
         alignSelf: "center",
         alignItems: "center",
-        paddingTop: "50%"
+        marginTop: "50%"
     },
 
     inputContainer: {

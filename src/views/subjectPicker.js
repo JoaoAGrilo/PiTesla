@@ -1,18 +1,17 @@
 import React, { Fragment } from "react";
-import { View, Text, StyleSheet } from "react-native"
+import { SafeAreaView, Text, StyleSheet } from "react-native"
 import SubjectPicker from "../components/SubjectPicker"
 import MiniLogo from "../components/MiniLogo";
 import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
-import SvgMathCard from "../../assets/svg/subjects/SvgMathCard";
 
 export default props => {
     return (
-        <View style={style.App}>
+        <SafeAreaView style={style.App}>
             <MiniLogo />
             <SvgHeaderWave1 />
             <Text style={style.mainText}>Escolha suas{"\n"}matérias</Text>
             <SubjectPicker />
-        </View>
+        </SafeAreaView>
     )
 }
 
