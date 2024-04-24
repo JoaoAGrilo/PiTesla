@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { SafeAreaView, Text, StyleSheet } from "react-native"
+import { View, SafeAreaView, Text, StyleSheet } from "react-native"
 import SubjectPicker from "../components/SubjectPicker"
 import MiniLogo from "../components/MiniLogo";
 import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
@@ -10,7 +10,9 @@ export default props => {
             <MiniLogo />
             <SvgHeaderWave1 />
             <Text style={style.mainText}>Escolha suas{"\n"}matérias</Text>
-            <SubjectPicker />
+            <View style={style.subjectPicker}>
+                <SubjectPicker />
+            </View>
         </SafeAreaView>
     )
 }
@@ -33,5 +35,9 @@ const style = StyleSheet.create({
     buttons: {
         alignSelf: "center",
         width: "80%",
+    },
+
+    subjectPicker: {
+        marginTop: "35%"
     }
 })
