@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { SafeAreaView, Text, StyleSheet } from "react-native"
 import StudentRegisterForm from "../components/StudentRegisterForm";
 import SvgHeaderWave2 from "../../assets/svg/patterns/SvgHeaderWave2";
-import MiniLogo from "../components/MiniLogo";
+import MiniLogo from "../components/atoms/MiniLogo";
 
 export default props => {
     return (

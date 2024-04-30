@@ -3,12 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import test from "./views/test";
-import welcome from "./views/welcome";
+import welcome from "./views/Welcome";
 import studentLogin from "./views/studentLogin";
 import studentRegister from "./views/studentRegister";
 import subjectPicker from "./views/subjectPicker";
-import studentHome from "./views/studentHome";
+import studentHome from "./views/StudentHomeScreen";
 import teacherHome from "./views/teacherHome";
+import StudentHomeScreen from "./views/StudentHomeScreen";
 
 export default () => {
 
@@ -24,7 +25,7 @@ export default () => {
                 <Stack.Screen name="StudentLogin" component={studentLogin} />
                 <Stack.Screen name="StudentRegister" component={studentRegister} />
                 <Stack.Screen name="SubjectPicker" component={subjectPicker} />
-                <Stack.Screen name="StudentHome" component={studentHome} />
+                <Stack.Screen name="StudentHome" component={StudentHomeScreen} />
                 <Stack.Screen name="TeacherHome" component={teacherHome} />
             </Stack.Navigator>
         </NavigationContainer>

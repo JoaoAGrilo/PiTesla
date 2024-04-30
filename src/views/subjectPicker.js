@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { View, SafeAreaView, Text, StyleSheet } from "react-native"
 import SubjectPicker from "../components/SubjectPicker"
-import MiniLogo from "../components/MiniLogo";
+import MiniLogo from "../components/atoms/MiniLogo";
 import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
 
 export default props => {
