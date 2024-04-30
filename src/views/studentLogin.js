@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import {  Text, StyleSheet, SafeAreaView } from "react-native"
 import StudentLoginForm from "../components/StudentLoginForm";
-import MiniLogo from "../components/MiniLogo";
+import MiniLogo from "../components/atoms/MiniLogo";
 import SvgHeaderWave1 from "../../assets/svg/patterns/SvgHeaderWave1";
 
 export default props => {
