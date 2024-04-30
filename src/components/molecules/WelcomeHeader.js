@@ -16,7 +16,3 @@ export default () => {
         </View>
     )
 }
-
-const style = StyleSheet.create({
-    
-  })
