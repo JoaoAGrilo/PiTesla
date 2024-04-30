@@ -19,12 +19,8 @@ export default props => {
                 </View>
             </View>
             <View style={style.botSection}>
-                <AtomicText fontFamily='Montserrat-Bold' fontSize={18} color='#F5F5F5'>
-                    Olá {userFirstName},
-                </AtomicText>
-                <AtomicText fontFamily='Montserrat-Bold' fontSize={24} color='#F5F5F5'>
-                    O que vamos estudar?
-                </AtomicText>
+                <AtomicText fontFamily='Montserrat-Bold' fontSize={18} color='#F5F5F5'>Olá {userFirstName},</AtomicText>
+                <AtomicText fontFamily='Montserrat-Bold' fontSize={24} color='#F5F5F5'>O que vamos estudar?</AtomicText>
             </View>
         </View>
     )

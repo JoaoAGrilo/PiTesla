@@ -7,7 +7,7 @@ export default props => {
     return (
         <SafeAreaView style={style.container}>
             <WelcomeHeader />
-            <WelcomeButtons style={style.buttonsContainer} navigation={props.navigation}/>
+            <WelcomeButtons navigation={props.navigation}/>
         </SafeAreaView>
     )
 }

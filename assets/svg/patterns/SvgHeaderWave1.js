@@ -25,21 +25,11 @@ const SvgHeaderWave1 = (props) => (
   
 )
 
-const style = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    top: -1,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: -1,
-    width: "100%"
-  },
-  
+const style = StyleSheet.create({  
   headerSquare: {
     backgroundColor: "#006BFF",
     width: {deviceWidth},
-    height: "14%",
+    height: "32%",
   },
 
   headerWave: {

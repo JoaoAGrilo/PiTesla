@@ -6,12 +6,8 @@ import ButtonReversed from "../atoms/ButtonReversed";
 export default props => {
     return (
         <View style={{marginTop: '8%'}}>
-            <ButtonReversed onPress={() => props.navigation.navigate('StudentLogin')}>Sou Aluno</ButtonReversed>
-            <ButtonRegular onPress={() => props.navigation.navigate('StudentLogin')}>Sou Professor</ButtonRegular>
+            <ButtonReversed onPress={() => props.navigation.navigate('UserLogin')}>Sou Aluno</ButtonReversed>
+            <ButtonRegular onPress={() => props.navigation.navigate('UserLogin')}>Sou Professor</ButtonRegular>
         </View>
     )
 }
-
-const style = StyleSheet.create({
-    
-  })

@@ -1,14 +1,15 @@
 import React from "react";
 import { View, StyleSheet } from "react-native"
-import Button from "../atoms/ButtonRegular";
-import TextInput from "../atoms/IconTextInput";
+import ButtonRegular from "../atoms/ButtonRegular";
+import IconTextInput from "../atoms/IconTextInput";
+import AtomicText from "../atoms/AtomicText";
 
 const LoginForm = props => {
   return (
     <View style={style.container}>
-      <TextInput style={style.textInput} placeholder=" Email"/>
-      <TextInput placeholder=" Senha" leftIcon='mail' rightIcon='lock'/>
-      <Button onPress={() => props.navigation.navigate('Home')} children="Entrar"/>
+      <IconTextInput placeholder=" Email" leftIcon='mail' rightIcon='mail'/>
+      <IconTextInput placeholder=" Senha" leftIcon='lock' rightIcon='hide'/>
+      <ButtonRegular onPress={() => props.navigation.navigate('StudentHomeScreen')}>Entrar</ButtonRegular>
     </View>
   )
 }
@@ -18,8 +19,8 @@ export default LoginForm
 
 const style = StyleSheet.create({
   container: {
+    marginTop: '32%',
     width: '70%',
-    alignSelf: "center",
-    alignItems: "center",
+    alignSelf: "center"
   },
 })
