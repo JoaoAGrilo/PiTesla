@@ -6,6 +6,7 @@ import test from "./views/test";
 import Welcome from "./views/Welcome";
 import StudentHomeScreen from "./views/StudentHomeScreen";
 import UserLoginScreen from "./views/UserLoginScreen";
+import StudentSubjectScreen from "./views/StudentSubjectScreen";
 
 export default () => {
 
@@ -20,6 +21,7 @@ export default () => {
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="UserLogin" component={UserLoginScreen} />
                 <Stack.Screen name="StudentHome" component={StudentHomeScreen} />
+                <Stack.Screen name='StudentSubject' component={StudentSubjectScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )

@@ -9,7 +9,7 @@ const LoginForm = props => {
     <View style={style.container}>
       <IconTextInput placeholder=" Email" leftIcon='mail' rightIcon='mail'/>
       <IconTextInput placeholder=" Senha" leftIcon='lock' rightIcon='hide'/>
-      <ButtonRegular onPress={() => props.navigation.navigate('StudentHomeScreen')}>Entrar</ButtonRegular>
+      <ButtonRegular onPress={() => props.navigation.navigate('StudentSubject')}>Entrar</ButtonRegular>
     </View>
   )
 }
