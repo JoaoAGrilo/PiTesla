@@ -2,6 +2,7 @@ import React from "react";
 import { View, FlatList, TouchableOpacity, StyleSheet, Touchable } from 'react-native'
 import AtomicText from "../atoms/AtomicText";
 import SvgCircleCheckIcon from "../../../assets/svg/icons/svgCircleCheckIcon";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
     {
@@ -39,12 +40,13 @@ const DATA = [
 ];
 
 export default props => {
+    const navigation = useNavigation()
     return (
         <FlatList 
         data={DATA}
         renderItem={({item: lesson}) => {
             return(
-                <TouchableOpacity style={style.container}>
+                <TouchableOpacity style={style.container} onPress={() => navigation.navigate('StudentLesson')}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 5}}>
                         <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#606060' >{lesson.title}</AtomicText>
                         <SvgCircleCheckIcon />
