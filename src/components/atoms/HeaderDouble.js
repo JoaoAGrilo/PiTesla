@@ -1,17 +1,17 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import AtomicText from '../atoms/AtomicText'
-import UserCoins from '../atoms/UserCoins'
-import ReturnButton from '../atoms/ReturnButton'
+import AtomicText from './AtomicText'
+import UserCoins from './UserCoins'
+import ReturnButton from './ReturnButton'
 
 export default props => {
     return(
         <View style={style.container}>
             <ReturnButton navigation={props.navigation} returnTo={props.returnTo}/>
             <View style={{width: '100%', position: 'absolute', alignSelf: 'center', justifyContent: 'center', alignItems: 'center'}}>
-                <AtomicText fontFamily='Montserrat-Bold' fontSize={24} color='#F5F5F5'>{props.children}</AtomicText>
+                <AtomicText fontFamily='Montserrat-Bold' fontSize={20} color='#F5F5F5'>{props.headerTitle}</AtomicText>
+                <AtomicText fontFamily='Montserrat-Bold' fontSize={16} color='#F5F5F5'>{props.headerSubTitle}</AtomicText>
             </View>
-            <UserCoins />
         </View>
     )
 }

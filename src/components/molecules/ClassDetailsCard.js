@@ -27,7 +27,7 @@ const subject = {
                 <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#808080'>
                     Aulas assistidas: {subject.watchedLessons}/{subject.lessonsAmount}
                 </AtomicText>
-                <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#808080'>
+                <AtomicText fontFamily='Montserrat-Medium' fontSize={16} color='#808080'>
                     <Text>Testes realizados: {subject.doneTests}/{subject.testAmount}</Text>
                 </AtomicText>
             </View>
