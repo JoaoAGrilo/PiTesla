@@ -9,6 +9,7 @@ import HomeTeacherScreen from './views/HomeTeacherScreen';
 import SubjectStudentScreen from './views/SubjectStudentScreen'
 import LessonStudentScreen from './views/LessonStudentScreen'
 import ExamStudentScreen from './views/ExamStudentScreen'
+import ClassTeacherScreen from '.view/ClassTeacherScreen'
 
 export default () => {
 
@@ -26,6 +27,7 @@ export default () => {
                 <Stack.Screen name='SubjectStudent' component={SubjectStudentScreen}/>
                 <Stack.Screen name='LessonStudent' component={LessonStudentScreen}/>
                 <Stack.Screen name='ExamStudent' component={ExamStudentScreen}/>
+                <Stack.Screen name='ClassTeacher' component={ClassTeacherScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

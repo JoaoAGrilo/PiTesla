@@ -1,6 +1,5 @@
-import React from "react";
+import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
-import AtomicText from "../atoms/AtomicText";
 
 
 export default () => {
@@ -19,17 +18,11 @@ const subject = {
         <View style={style.container}>
 
             <View style={style.gradeContainer}>
-                <AtomicText fontFamily='Montserrat-SemiBold' fontSize={24} color='#808080'>
-                    {subject.grade}/10
-                </AtomicText>
+                <Text style={style.grade}>{subject.grade}/10</Text>
             </View>
             <View>
-                <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#808080'>
-                    Aulas assistidas: {subject.watchedLessons}/{subject.lessonsAmount}
-                </AtomicText>
-                <AtomicText fontFamily='Montserrat-Medium' fontSize={16} color='#808080'>
-                    <Text>Testes realizados: {subject.doneTests}/{subject.testAmount}</Text>
-                </AtomicText>
+                <Text style={style.detailsText}>Aulas assistidas: {subject.watchedLessons}/{subject.lessonsAmount}</Text>
+                <Text style={style.detailsText}>Testes realizados: {subject.doneTests}/{subject.testAmount}</Text>
             </View>
         </View>
     )
@@ -57,5 +50,17 @@ const style = StyleSheet.create ({
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 24
+    },
+
+    grade: {
+        fontFamily: 'Montserrat-SemiBold',
+        fontSize: 25,
+        color: '#808080'
+    },
+
+    detailsText: {
+        fontFamily: 'Montserrat-SemiBold',
+        fontSize: 16,
+        color: '#808080'
     }
 })

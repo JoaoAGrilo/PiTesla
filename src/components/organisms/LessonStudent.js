@@ -1,19 +1,18 @@
 import React from 'react'
 import { View } from 'react-native'
-import DoubleHeader from '../molecules/HeaderDouble'
 import LessonContent from '../molecules/LessonContent'
 import HeaderDouble from '../molecules/HeaderDouble'
 
-export default props => {
+export default () => {
     
     const currentLesson = 'Notação científica'
     const currentSubject = 'Física'
 
     return (
         <View>            
-            <HeaderDouble navigation={props.navigation} headerTitle={currentLesson} headerSubTitle={currentSubject} returnTo='StudentSubject'/>
+            <HeaderDouble headerTitle={currentLesson} headerSubTitle={currentSubject} returnTo='StudentSubject'/>
             <View style={{padding: 20}}>
-                <LessonContent navigation={props.navigation}/>
+                <LessonContent/>
             </View>
         </View>
     )
