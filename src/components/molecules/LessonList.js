@@ -1,9 +1,8 @@
-import React from "react";
-import { View, FlatList, TouchableOpacity, StyleSheet, Touchable } from 'react-native'
-import AtomicText from "../atoms/AtomicText";
-import SvgCircleCheckIcon from "../../../assets/svg/icons/svgCircleCheckIcon";
-import SvgPendingExamIcon from "../../../assets/svg/icons/SvgPendingExamIcon";
-import { useNavigation } from "@react-navigation/native";
+import React from 'react'
+import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import SvgCircleCheckIcon from '../../../assets/svg/icons/svgCircleCheckIcon'
+import SvgPendingExamIcon from '../../../assets/svg/icons/SvgPendingExamIcon'
 
 const DATA = [
     {
@@ -56,13 +55,13 @@ export default props => {
             }
 
             return(
-                <TouchableOpacity style={style.container} onPress={() => navigation.navigate('StudentLesson')}>
-                    <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 5}}>
-                        <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#606060' >{lesson.title}</AtomicText>
+                <TouchableOpacity style={style.container} onPress={() => navigation.navigate('LessonStudent')}>
+                    <View style={style.lessonHeaderContainer}>
+                        <Text style={style.lessonTitle}>{lesson.title}</Text>
                         {ComponenteIcone && <ComponenteIcone />}
                     </View>
-                    <AtomicText fontFamily='Montserrat-SemiBold' fontSize={15} color='#808080' style={{marginBottom:4}} >{lesson.timeLength} minutos</AtomicText>
-                    <AtomicText fontFamily='Montserrat-SemiBold' fontSize={15} color='#808080' >Avaliação: {lesson.testGrade}</AtomicText>
+                    <Text style={style.lessonInfo}>{lesson.timeLength} minutos</Text>
+                    <Text style={style.lessonInfo}>Avaliação: {lesson.testGrade}</Text>
                 </TouchableOpacity>
             )
         }}/>
@@ -78,5 +77,26 @@ const style = StyleSheet.create({
         margin: 5,
         padding: 16,
         borderRadius: 20,
+    },
+
+    lessonHeaderContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingBottom: 5
+    },
+
+    lessonTitle: {
+        fontFamily: 'Montserrat-SemiBold',
+        fontSize: 16,
+        color: '#808080'
+    },
+
+    lessonInfo: {
+        fontFamily: 'Montserrat-SemiBold',
+        fontSize: 15,
+        color: '#808080',
+        marginBottom: 4
     }
+
+
   })

@@ -1,11 +1,10 @@
 import React from "react";
-import { View, StyleSheet } from 'react-native'
-import AtomicText from "../atoms/AtomicText";
-import MiniLogo from "../atoms/MiniLogo";
-import UserLevel from "../atoms/UserLevel";
+import { View, Text, StyleSheet } from 'react-native'
+import MiniLogo from "../atoms/MiniLogo"
+import UserLevel from "../atoms/UserLevel"
 import UserCoins from "../atoms/UserCoins"
 
-export default props => {
+export default () => {
 
     const userFirstName = 'João'
 
@@ -19,8 +18,8 @@ export default props => {
                 </View>
             </View>
             <View style={style.botSection}>
-                <AtomicText fontFamily='Montserrat-Bold' fontSize={18} color='#F5F5F5'>Olá {userFirstName},</AtomicText>
-                <AtomicText fontFamily='Montserrat-Bold' fontSize={24} color='#F5F5F5'>O que vamos estudar?</AtomicText>
+                <Text style={style.subText}>Olá {userFirstName},</Text>
+                <Text style={style.mainText}>O que vamos estudar?</Text>
             </View>
         </View>
     )
@@ -35,5 +34,17 @@ const style = StyleSheet.create({
 
     botSection: {
         marginTop: '24%'
+    },
+
+    subText: {
+        fontFamily: 'Montserrat-Bold',
+        fontSize: 18,
+        color: '#F5F5F5'
+    },
+
+    mainText: {
+        fontFamily: 'Montserrat-Bold',
+        fontSize: 24,
+        color: '#F5F5F5'
     }
   })

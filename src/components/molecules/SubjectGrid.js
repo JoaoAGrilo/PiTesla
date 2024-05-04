@@ -1,17 +1,17 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import HomeCard from '../atoms/HomeCard'
+import SubjectCard from '../atoms/SubjectCard'
 
-export default props => {
+export default () => {
     return (
         <View style={style.container}>
             <View style={style.gridLine}>
-                <HomeCard cardType='Physics' navigation={props.navigation}/>
-                <HomeCard cardType='Math' navigation={props.navigation}/>
+                <SubjectCard cardType='Physics'/>
+                <SubjectCard cardType='Math'/>
             </View>
             <View style={style.gridLine}>
-                <HomeCard cardType='Computer' navigation={props.navigation}/>
-                <HomeCard cardType='Chemistry' navigation={props.navigation}/>
+                <SubjectCard cardType='Computer'/>
+                <SubjectCard cardType='Chemistry'/>
             </View>
         </View>
 

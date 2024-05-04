@@ -1,11 +1,10 @@
 import React from 'react'
 import { TouchableOpacity, View, StyleSheet, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import SvgPhysicsIcon from '../../../assets/svg/icons/SvgPhysicsIcon'
 import SvgMathIcon from '../../../assets/svg/icons/SvgMathIcon'
 import SvgComputerIcon from '../../../assets/svg/icons/SvgComputerIcon'
 import SvgChemistryIcon from '../../../assets/svg/icons/SvgChemistryIcon'
-import AtomicText from './AtomicText'
-import { useNavigation } from '@react-navigation/native'
 
 export default props => {
 
@@ -41,7 +40,7 @@ export default props => {
     }
 
     return (
-        <TouchableOpacity style={[style.container, {backgroundColor: cardColor}]} onPress={() => navigation.navigate('StudentSubject')}>
+        <TouchableOpacity style={[style.container, {backgroundColor: cardColor}]} onPress={() => navigation.navigate('SubjectStudent', { cardType: props.cardType })}>
             <Icon />
             <Text style={style.cardText}>{cardText}</Text>
         </TouchableOpacity>
