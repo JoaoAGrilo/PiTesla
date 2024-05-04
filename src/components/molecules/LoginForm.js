@@ -1,26 +1,39 @@
-import React from "react";
-import { View, StyleSheet } from "react-native"
-import ButtonRegular from "../atoms/ButtonRegular";
-import IconTextInput from "../atoms/IconTextInput";
-import AtomicText from "../atoms/AtomicText";
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import ButtonRegular from '../atoms/ButtonRegular'
+import TextInputMail from '../atoms/TextInputMail'
+import TextInputPass from '../atoms/TextInputPass'
 
-const LoginForm = props => {
+export default () => {
+
+  const navigation = useNavigation();
+  const route = useRoute();
+
+  const { userType } = route.params;
+
+  const handleLogin = () => {
+
+    if (userType === 'student') {
+      navigation.navigate('HomeStudent');
+    } else if (userType === 'teacher') {
+      navigation.navigate('HomeTeacher');
+    }
+  };
+
   return (
     <View style={style.container}>
-      <IconTextInput placeholder=" Email" leftIcon='mail' rightIcon='mail'/>
-      <IconTextInput placeholder=" Senha" leftIcon='lock' rightIcon='hide'/>
-      <ButtonRegular onPress={() => props.navigation.navigate('StudentSubject')}>Entrar</ButtonRegular>
+      <TextInputMail/>
+      <TextInputPass/>
+      <ButtonRegular onPress={handleLogin}>Entrar</ButtonRegular>
     </View>
   )
 }
 
-
-export default LoginForm
-
 const style = StyleSheet.create({
   container: {
+    alignSelf: "center",
     marginTop: '32%',
     width: '70%',
-    alignSelf: "center"
   },
 })

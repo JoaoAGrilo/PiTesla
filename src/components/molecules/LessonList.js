@@ -2,6 +2,7 @@ import React from "react";
 import { View, FlatList, TouchableOpacity, StyleSheet, Touchable } from 'react-native'
 import AtomicText from "../atoms/AtomicText";
 import SvgCircleCheckIcon from "../../../assets/svg/icons/svgCircleCheckIcon";
+import SvgPendingExamIcon from "../../../assets/svg/icons/SvgPendingExamIcon";
 import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
@@ -45,11 +46,20 @@ export default props => {
         <FlatList 
         data={DATA}
         renderItem={({item: lesson}) => {
+            let ComponenteIcone;
+            if (lesson.isWatched == false) {
+                ComponenteIcone = null;
+            } else if (lesson.isWatched == true && lesson.testIsDone == false) {
+                ComponenteIcone = SvgPendingExamIcon;
+            } else if (lesson.isWatched == true && lesson.testIsDone == true) {
+                ComponenteIcone = SvgCircleCheckIcon;
+            }
+
             return(
                 <TouchableOpacity style={style.container} onPress={() => navigation.navigate('StudentLesson')}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 5}}>
                         <AtomicText fontFamily='Montserrat-SemiBold' fontSize={16} color='#606060' >{lesson.title}</AtomicText>
-                        <SvgCircleCheckIcon />
+                        {ComponenteIcone && <ComponenteIcone />}
                     </View>
                     <AtomicText fontFamily='Montserrat-SemiBold' fontSize={15} color='#808080' style={{marginBottom:4}} >{lesson.timeLength} minutos</AtomicText>
                     <AtomicText fontFamily='Montserrat-SemiBold' fontSize={15} color='#808080' >Avaliação: {lesson.testGrade}</AtomicText>
@@ -58,6 +68,7 @@ export default props => {
         }}/>
     )
 }
+
 
 const style = StyleSheet.create({
     

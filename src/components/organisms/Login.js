@@ -3,12 +3,12 @@ import { View, StyleSheet } from 'react-native'
 import LoginForm from '../molecules/LoginForm'
 import LoginHeader from '../molecules/LoginHeader'
 
-export default props => {
+export default () => {
     return(
     <View style={style.container}>
-        <LoginHeader style={{flex: 1}}/>
+        <LoginHeader/>
         <View  style={style.loginFormContainer}>
-            <LoginForm navigation={props.navigation}/>
+            <LoginForm/>
         </View>
     </View>
     )
@@ -16,8 +16,8 @@ export default props => {
 
 const style = StyleSheet.create({
     container: {
-        height: '100%',
         backgroundColor: '#F5F5F5',
+        height: '100%',
         padding: 20
     },
 

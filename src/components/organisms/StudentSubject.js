@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native"
 import LessonList from "../molecules/LessonList";
-import SimpleHeader from "../atoms/HeaderSimple";
+import SimpleHeader from "../molecules/HeaderSimple";
 import ClassDetailsCard from "../molecules/ClassDetailsCard";
 
 export default props => {
