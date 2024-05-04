@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import AtomicText from './AtomicText'
-import UserCoins from './UserCoins'
-import ReturnButton from './ReturnButton'
+import AtomicText from '../atoms/AtomicText'
+import UserCoins from '../atoms/UserCoins'
+import ReturnButton from '../atoms/ReturnButton'
 
 export default props => {
     return(

@@ -4,7 +4,7 @@ import StudentLesson from '../components/organisms/StudentLesson'
 
 export default props => {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor: '#FFFFFF'}}>
             <StudentLesson navigation={props.navigation}/>
         </SafeAreaView>
     )

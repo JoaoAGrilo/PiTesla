@@ -1,22 +1,23 @@
-import React, { Fragment } from "react";
-import { View, SafeAreaView, Text, StyleSheet } from "react-native"
-import WelcomeHeader from "../molecules/WelcomeHeader";
-import WelcomeButtons from "../molecules/WelcomeButtons";
+import React from 'react';
+import { View, StyleSheet } from 'react-native'
 
-export default props => {
+import WelcomeHeader from '../molecules/WelcomeHeader'
+import WelcomeButtons from '../molecules/WelcomeButtons'
+
+export default () => {
     return (
-        <SafeAreaView style={style.container}>
+        <View style={style.container}>
             <WelcomeHeader />
-            <WelcomeButtons navigation={props.navigation}/>
-        </SafeAreaView>
+            <WelcomeButtons/>
+        </View>
     )
 }
 
 
 const style = StyleSheet.create({
     container: {
-        height: '100%',
         backgroundColor: '#006BFF',
+        height: '100%',
         padding: 20
     },
 })

@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Welcome from "./views/Welcome";
-import StudentHomeScreen from "./views/StudentHomeScreen";
-import UserLoginScreen from "./views/UserLoginScreen";
-import StudentSubjectScreen from "./views/StudentSubjectScreen";
-import StudentLessonScreen from "./views/StudentLessonScreen";
+import Welcome from './views/WelcomeScreen'
+import LoginScreen from './views/LoginScreen'
+import HomeStudentScreen from './views/HomeStudentScreen'
+import HomeTeacherScreen from './views/HomeTeacherScreen';
+import SubjectStudentScreen from './views/SubjectStudentScreen'
+import LessonStudentScreen from './views/LessonStudentScreen'
+import ExamStudentScreen from './views/ExamStudentScreen'
 
 export default () => {
 
@@ -15,13 +17,15 @@ export default () => {
     return (
         <NavigationContainer>
             <Stack.Navigator 
-            initialRouteName="Welcome"
+            initialRouteName='Welcome'
             screenOptions={{headerShown: false}}>
-                <Stack.Screen name="Welcome" component={Welcome} />
-                <Stack.Screen name="UserLogin" component={UserLoginScreen} />
-                <Stack.Screen name="StudentHome" component={StudentHomeScreen} />
-                <Stack.Screen name='StudentSubject' component={StudentSubjectScreen} />
-                <Stack.Screen name='StudentLesson' component={StudentLessonScreen} />
+                <Stack.Screen name='Welcome' component={Welcome}/>
+                <Stack.Screen name='LoginScreen' component={LoginScreen}/>
+                <Stack.Screen name='HomeStudent' component={HomeStudentScreen}/>
+                <Stack.Screen name='HomeTeacher' component={HomeTeacherScreen}/>
+                <Stack.Screen name='SubjectStudent' component={SubjectStudentScreen}/>
+                <Stack.Screen name='LessonStudent' component={LessonStudentScreen}/>
+                <Stack.Screen name='ExamStudent' component={ExamStudentScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
