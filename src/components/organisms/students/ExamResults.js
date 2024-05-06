@@ -15,6 +15,7 @@ export default () => {
 
     const examResult = 7.5
     const gainedCoins = 24
+    const gainedXp = 200
     const currentXp = 600
     const nextLevelXp = 1200
     const progressValue = (currentXp/nextLevelXp)
@@ -26,13 +27,13 @@ export default () => {
                 <ResultsCircleBar examResult={examResult}/>
             </View>
             <View>
-                <ResultsProgressBar  progressValue={progressValue}/>
+                <ResultsProgressBar gainedXp={gainedXp} progressValue={progressValue}/>
             </View>
             <View style={style.resultsListContainer}>
                 <ResultsQuestionsList/>
             </View>
             <View style={style.buttonContainer}>
-                <ButtonReversed >Concluir</ButtonReversed>
+                <ButtonReversed onPress={() => navigation.navigate('SubjectStudent')}>Concluir</ButtonReversed>
             </View>
         </View>
     )

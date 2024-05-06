@@ -6,6 +6,7 @@ export default props => {
 
     const currentLevel = 7
     const progressValue = props.progressValue
+    const gainedXp = props.gainedXp
 
     return (
         <View style={style.container}>
@@ -15,6 +16,7 @@ export default props => {
                     <View style={style.progressBar}>
                         <Progress.Bar animated={true} progress={progressValue} width={300} height={8} borderRadius={10} borderWidth={3} borderColor='#F5F5F5' color='#006BFF' unfilledColor='#77B0FF' />
                     </View>
+                    <Text style={style.xpText}>+{gainedXp}xp</Text>
                 </View>
             <Text style={style.levelNumber}>{currentLevel+1}</Text>
         </View>
@@ -43,6 +45,12 @@ const style = StyleSheet.create({
         fontSize: 24,
         color: '#F5F5F5',
         marginBottom: 12
+    },
+
+    xpText: {
+        fontFamily: 'Montserrat-Medium',
+        fontSize: 15,
+        color: '#F5F5F5'
     },
 
     levelNumber: {

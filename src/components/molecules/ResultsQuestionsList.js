@@ -27,15 +27,7 @@ const questions = [
     {
         id: '6',
         correct: false
-    },
-    {
-        id: '7',
-        correct: true
-    },
-    {
-        id: '8',
-        correct: true
-    },
+    }
 ];
 
 export default () => {

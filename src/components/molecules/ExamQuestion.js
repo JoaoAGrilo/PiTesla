@@ -1,35 +1,16 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import React from 'react'
+import { View, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import ButtonRegular from '../atoms/ButtonRegular'
 
-const Question = ({ number, question, options }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
+export default () => {
+
+  const navigation = useNavigation()
 
   return (
     <View>
-      <Text>{`Questão ${number}: ${question}`}</Text>
-      {options.map((option, index) => (
-        <TouchableOpacity
-          key={index}
-          onPress={() => setSelectedOption(option)}
-          style={{ backgroundColor: selectedOption === option ? 'blue' : 'white' }}
-        >
-          <Text>{option}</Text>
-        </TouchableOpacity>
-      ))}
+      <Text>Perguntas</Text>
+      <ButtonRegular onPress={() => navigation.navigate('ExamResults')}>Finalizar avaliação</ButtonRegular>
     </View>
-  );
-};
-
-const App = () => {
-  return (
-    <SafeAreaView>
-      <Question
-        number={1}
-        question="Esta é uma pergunta?"
-        options={['Opção 1', 'Opção 2', 'Opção 3']}
-      />
-    </SafeAreaView>
-  );
-};
-
-export default App;
+  )
+}
