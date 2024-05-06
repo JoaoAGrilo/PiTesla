@@ -5,9 +5,12 @@ import { View, Text, StyleSheet } from 'react-native'
 export default () => {
     
 const subject = {
+        id: '001',
         grade: 7,
-        classStudents: 24,
-        classLessons: 16
+        lessonsAmount: 4,
+        watchedLessons: 2,
+        testAmount: 3,
+        doneTests: 2,
     }
 
 
@@ -18,8 +21,8 @@ const subject = {
                 <Text style={style.grade}>{subject.grade}/10</Text>
             </View>
             <View>
-                <Text style={style.detailsText}>Alunos matriculados: {subject.classStudents}</Text>
-                <Text style={style.detailsText}>Aulas cadastradas: {subject.classLessons}</Text>
+                <Text style={style.detailsText}>Aulas assistidas: {subject.watchedLessons}/{subject.lessonsAmount}</Text>
+                <Text style={style.detailsText}>Testes realizados: {subject.doneTests}/{subject.testAmount}</Text>
             </View>
         </View>
     )

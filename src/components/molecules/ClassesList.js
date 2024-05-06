@@ -54,7 +54,7 @@ export default props => {
             data={DATA}
             renderItem={({item: thisClass}) => {
                 return (
-                    <TouchableOpacity style={style.classContainer} onPress={() => navigation.navigate('LessonStudent')}>
+                    <TouchableOpacity style={style.classContainer} onPress={() => navigation.navigate('ClassTeacher')}>
                         <View>
                             <Text style={style.className}>{thisClass.name}</Text>
                             <Text style={style.classCode}>{thisClass.code}</Text>
@@ -114,7 +114,7 @@ const style = StyleSheet.create({
     },
 
     listHeaderText: {
-        fontFamily: 'Montserrt-SemiBold',
+        fontFamily: 'Montserrat-SemiBold',
         fontSize: 16,
         color: '#808080'
     },

@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, Text } from "react-native"
-import HomeTeacher from "../components/organisms/HomeTeacher";
+import HomeTeacher from "../../components/organisms/teacher/HomeTeacher";
 
 export default props => {
     return (

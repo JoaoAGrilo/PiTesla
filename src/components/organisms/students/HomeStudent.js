@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import StudentHomeHeader from '../molecules/StudentHomeHeader'
-import SubjectGrid from '../molecules/SubjectGrid'
+import StudentHomeHeader from '../../molecules/StudentHomeHeader'
+import SubjectGrid from '../../molecules/SubjectGrid'
 
 
 export default () => {
