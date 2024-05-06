@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView} from 'react-native'
-import StudentSubject from '../components/organisms/SubjectStudent'
+import StudentSubject from '../../components/organisms/students/SubjectStudent'
 
 export default props => {
     return(

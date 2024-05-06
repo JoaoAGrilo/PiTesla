@@ -23,7 +23,7 @@ const style = StyleSheet.create({
 
     text: {
         fontFamily: 'Montserrat-Bold',
-        fontSize: 16,
+        fontSize: 18,
         color: '#F5F5F5'
     }
 })

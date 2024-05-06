@@ -1,15 +1,19 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import UserCoins from '../atoms/UserCoins'
 import ReturnButton from '../atoms/ReturnButton'
+import { useNavigation } from '@react-navigation/native'
 
-export default props => {
+export default ({ return: shouldReturn = true, coins: shouldShowCoins = true, ...props }) => {
+
     return(
         <View style={style.container}>
-            <ReturnButton returnTo={props.returnTo}/>
-            <View style={style.textContainer}>
-                <Text style={style.headerTitle}>{props.headerTitle}</Text>
-                <Text style={style.headerSubtitle}>{props.headerSubTitle}</Text>
+            {shouldReturn && <ReturnButton returnTo={props.returnTo}/>}
+            <View style={style.headerTextContainer}>
+                <Text style={style.headerText}>{props.headerText}</Text>
+                {props.headerSubText && <Text style={style.headerSubText}>{props.headerSubText}</Text>}
             </View>
+            {shouldShowCoins && <UserCoins />}
         </View>
     )
 }
@@ -19,11 +23,12 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
+        height: 60,
         backgroundColor: '#006BFF',
         padding: 20
     },
 
-    textContainer: {
+    headerTextContainer: {
         width: '100%',
         position: 'absolute',
         alignSelf: 'center',
@@ -31,13 +36,13 @@ const style = StyleSheet.create({
         alignItems: 'center'
     },
 
-    headerTitle: {
+    headerText: {
         fontFamily: 'Montserrat-Bold',
-        fontSize: 20,
+        fontSize: 22,
         color: '#F5F5F5'
     },
 
-    headerSubtitle: {
+    headerSubText: {
         fontFamily: 'Montserrat-Medium',
         fontSize: 16,
         color: '#F5F5F5'

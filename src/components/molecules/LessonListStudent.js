@@ -42,41 +42,47 @@ const DATA = [
 export default props => {
     const navigation = useNavigation()
     return (
-        <FlatList 
-        data={DATA}
-        renderItem={({item: lesson}) => {
-            let ComponenteIcone;
-            if (lesson.isWatched == false) {
-                ComponenteIcone = null;
-            } else if (lesson.isWatched == true && lesson.testIsDone == false) {
-                ComponenteIcone = SvgPendingExamIcon;
-            } else if (lesson.isWatched == true && lesson.testIsDone == true) {
-                ComponenteIcone = SvgCircleCheckIcon;
-            }
+        <View style={style.container}>
+            <FlatList 
+            data={DATA}
+            renderItem={({item: lesson}) => {
+                let ComponenteIcone;
+                if (lesson.isWatched == false) {
+                    ComponenteIcone = null;
+                } else if (lesson.isWatched == true && lesson.testIsDone == false) {
+                    ComponenteIcone = SvgPendingExamIcon;
+                } else if (lesson.isWatched == true && lesson.testIsDone == true) {
+                    ComponenteIcone = SvgCircleCheckIcon;
+                }
 
-            return(
-                <TouchableOpacity style={style.container} onPress={() => navigation.navigate('LessonStudent')}>
-                    <View style={style.lessonHeaderContainer}>
-                        <Text style={style.lessonTitle}>{lesson.title}</Text>
-                        {ComponenteIcone && <ComponenteIcone />}
-                    </View>
-                    <Text style={style.lessonInfo}>{lesson.timeLength} minutos</Text>
-                    <Text style={style.lessonInfo}>Avaliação: {lesson.testGrade}</Text>
-                </TouchableOpacity>
-            )
-        }}/>
+                return(
+                    <TouchableOpacity style={style.buttonContainer} onPress={() => navigation.navigate('LessonStudent')}>
+                        <View style={style.lessonHeaderContainer}>
+                            <Text style={style.lessonTitle}>{lesson.title}</Text>
+                            {ComponenteIcone && <ComponenteIcone />}
+                        </View>
+                        <Text style={style.lessonInfo}>{lesson.timeLength} minutos</Text>
+                        <Text style={style.lessonInfo}>Avaliação: {lesson.testGrade}</Text>
+                    </TouchableOpacity>
+                )
+            }}/>
+        </View>
     )
 }
 
 
 const style = StyleSheet.create({
-    
+
     container: {
+        padding: 20
+    },
+    
+    buttonContainer: {
         width: '100%',
         backgroundColor: '#FFFFFF',
-        margin: 5,
         padding: 16,
         borderRadius: 20,
+        marginBottom: 10
     },
 
     lessonHeaderContainer: {

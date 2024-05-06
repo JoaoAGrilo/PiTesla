@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import StudentHome from '../components/organisms/HomeStudent'
+import StudentHome from '../../components/organisms/students/HomeStudent'
 
 export default () => {
     return (

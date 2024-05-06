@@ -1,11 +1,11 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import StudentLesson from '../components/organisms/LessonStudent'
+import StudentLesson from '../../components/organisms/students/LessonStudent'
 
-export default props => {
+export default () => {
     return (
         <SafeAreaView style={{backgroundColor: '#FFFFFF'}}>
-            <StudentLesson navigation={props.navigation}/>
+            <StudentLesson/>
         </SafeAreaView>
     )
 }

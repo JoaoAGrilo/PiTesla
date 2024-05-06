@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native"
-import LessonList from "../molecules/LessonList";
-import SimpleHeader from "../molecules/HeaderSimple";
-import ClassDetailsCard from "../molecules/ClassDetailsCard";
+import LessonList from "../../molecules/LessonListStudent";
+import Header from "../../molecules/Header";
+import ClassDetailsCard from "../../molecules/LessonDetailsCard";
 
 export default props => {
    
@@ -10,7 +10,7 @@ export default props => {
     
     return (
         <View style={{flex:1, backgroundColor: '#F5F5F5'}}>
-            <SimpleHeader navigation={props.navigation} headerText={currentSubject} returnTo='StudentHome'/>
+            <Header headerText={currentSubject} returnTo='HomeStudent'/>
             <ClassDetailsCard />
             <LessonList/>
         </View>

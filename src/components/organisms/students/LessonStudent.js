@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
-import LessonContent from '../molecules/LessonContent'
-import HeaderDouble from '../molecules/HeaderDouble'
+import LessonContent from '../../molecules/LessonContent'
+import Header from '../../molecules/Header'
 
 export default () => {
     
@@ -10,7 +10,7 @@ export default () => {
 
     return (
         <View>            
-            <HeaderDouble headerTitle={currentLesson} headerSubTitle={currentSubject} returnTo='StudentSubject'/>
+            <Header headerText={currentLesson} headerSubText={currentSubject} returnTo='SubjectStudent'/>
             <View style={{padding: 20}}>
                 <LessonContent/>
             </View>
