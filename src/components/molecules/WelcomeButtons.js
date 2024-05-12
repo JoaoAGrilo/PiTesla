@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import ButtonRegular from '../atoms/ButtonRegular'
 import ButtonReversed from '../atoms/ButtonReversed'
 
 export default () => {
-
     const navigation = useNavigation()
 
     return (
