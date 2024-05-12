@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from '@react-navigation/native'
 import ButtonRegular from '../atoms/ButtonRegular'
 import TextInputMail from '../atoms/TextInputMail'
 import TextInputPass from '../atoms/TextInputPass'
+import ButtonReversed from '../atoms/ButtonReversed'
 
 export default () => {
   const navigation = useNavigation()
@@ -24,6 +25,7 @@ export default () => {
       <TextInputMail/>
       <TextInputPass/>
       <ButtonRegular onPress={handleLogin}>Entrar</ButtonRegular>
+      <ButtonReversed onPress={handleLogin}>Entrar</ButtonReversed>
     </View>
   )
 }
