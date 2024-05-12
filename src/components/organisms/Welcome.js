@@ -8,7 +8,7 @@ export default () => {
     return (
         <View style={style.container}>
             <WelcomeHeader />
-            {/* <WelcomeButtons/> */}
+            <WelcomeButtons/>
         </View>
     )
 }
