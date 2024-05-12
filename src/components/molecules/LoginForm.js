@@ -25,7 +25,7 @@ export default () => {
       <TextInputMail/>
       <TextInputPass/>
       <ButtonRegular onPress={handleLogin}>Entrar</ButtonRegular>
-      <ButtonReversed onPress={handleLogin}>Entrar</ButtonReversed>
+      <ButtonReversed onPress={() => navigation.navigate('Welcome')}>Voltar</ButtonReversed>
     </View>
   )
 }
