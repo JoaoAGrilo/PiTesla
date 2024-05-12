@@ -6,20 +6,18 @@ import TextInputMail from '../atoms/TextInputMail'
 import TextInputPass from '../atoms/TextInputPass'
 
 export default () => {
+  const navigation = useNavigation()
+  
+  const route = useRoute()
+  const { userType } = route.params
 
-  const navigation = useNavigation();
-  const route = useRoute();
-
-  const { userType } = route.params;
-
-  const handleLogin = () => {
-
-    if (userType === 'student') {
-      navigation.navigate('HomeStudent');
-    } else if (userType === 'teacher') {
-      navigation.navigate('HomeTeacher');
-    }
-  };
+  // const handleLogin = () => {
+  //   if (userType === 'student') {
+  //     navigation.navigate('HomeStudent')
+  //   } else if (userType === 'teacher') {
+  //     navigation.navigate('HomeTeacher')
+  //   }
+  // }
 
   return (
     <View style={style.container}>
