@@ -13,7 +13,6 @@ export default () => {
     )
 }
 
-
 const style = StyleSheet.create({
     container: {
         backgroundColor: '#006BFF',

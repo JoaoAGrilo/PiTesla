@@ -5,6 +5,7 @@ import ButtonRegular from '../atoms/ButtonRegular'
 import TextInputMail from '../atoms/TextInputMail'
 import TextInputPass from '../atoms/TextInputPass'
 import ButtonReversed from '../atoms/ButtonReversed'
+import { BaseController } from '../../controllers/BaseController'
 
 export default () => {
   const navigation = useNavigation()
@@ -13,11 +14,14 @@ export default () => {
   const { userType } = route.params
 
   const handleLogin = () => {
-    if (userType === 'student') {
-      navigation.navigate('HomeStudent')
-    } else if (userType === 'teacher') {
-      navigation.navigate('HomeTeacher')
-    }
+    const baseController = new BaseController()
+    baseController.get()
+
+    // if (userType === 'student') {
+    //   navigation.navigate('HomeStudent')
+    // } else if (userType === 'teacher') {
+    //   navigation.navigate('HomeTeacher')
+    // }
   }
 
   return (
