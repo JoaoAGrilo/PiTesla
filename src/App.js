@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 // import test from './views/test'
 import Welcome from './views/WelcomeScreen'
-// import LoginScreen from './views/LoginScreen'
+import LoginScreen from './views/LoginScreen'
 
 // import HomeStudentScreen from './views/student/HomeStudentScreen'
 // import SubjectStudentScreen from './views/student/SubjectStudentScreen'
