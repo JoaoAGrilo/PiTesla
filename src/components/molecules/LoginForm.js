@@ -14,8 +14,8 @@ export default () => {
   const { userType } = route.params
 
   const handleLogin = () => {
-    const baseController = new BaseController()
-    baseController.get()
+    // const baseController = new BaseController()
+    // baseController.get()
 
     // if (userType === 'student') {
     //   navigation.navigate('HomeStudent')

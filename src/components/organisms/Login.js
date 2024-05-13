@@ -7,7 +7,7 @@ export default () => {
     return(
     <View style={style.container}>
         <LoginHeader/>
-        <View  style={style.loginFormContainer}>
+        <View style={style.loginFormContainer}>
             <LoginForm/>
         </View>
     </View>
