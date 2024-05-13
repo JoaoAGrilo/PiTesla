@@ -30,7 +30,7 @@ export default () => {
                 {/* General */}
                 {/* <Stack.Screen name='Test' component={test}/>       */}
                 <Stack.Screen name='Welcome' component={Welcome}/>
-                {/* <Stack.Screen name='LoginScreen' component={LoginScreen}/> */}
+                <Stack.Screen name='LoginScreen' component={LoginScreen}/>
 
                 {/* Student */}
                 {/* <Stack.Screen name='HomeStudent' component={HomeStudentScreen}/>
