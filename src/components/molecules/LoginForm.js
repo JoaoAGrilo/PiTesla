@@ -14,6 +14,7 @@ export default () => {
   const { userType } = route.params
 
   const handleLogin = () => {
+    console.log('oi')
     // const baseController = new BaseController()
     // baseController.get()
 
