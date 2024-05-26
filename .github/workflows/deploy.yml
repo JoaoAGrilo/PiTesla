@@ -29,6 +29,16 @@ jobs:
               run: |
                 cd android
                 ./gradlew assembleRelease
+
+            - name: 💻 Build Android
+              run: |
+                ls
+                cd app
+                ls
+                cd build
+                ls
+                cd outputs
+                ls
       
             - name: 📂 Send APK to Cpanel
               uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -37,5 +47,5 @@ jobs:
                 username: ${{ secrets.FTP_USERNAME }}
                 password: ${{ secrets.FTP_PASSWORD }}
                 port: ${{ secrets.FTP_PORT }}
-                local-dir: '/android/app/build/outputs/apk/release'
-                server-dir: '/public/apk'
+                local-dir: './android/app/build/outputs/apk/release'
+                server-dir: './public/apk'
