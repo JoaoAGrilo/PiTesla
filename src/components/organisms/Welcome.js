@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
 import WelcomeHeader from '../molecules/WelcomeHeader'
@@ -12,7 +12,6 @@ export default () => {
         </View>
     )
 }
-
 
 const style = StyleSheet.create({
     container: {
