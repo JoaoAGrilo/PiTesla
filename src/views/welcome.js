@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import { View, SafeAreaView, Text, StyleSheet } from "react-native"
-import MiniLogo from "../components/MiniLogo";
-import SvgWelcomeArt from "../../assets/svg/arts/SvgWelcomeArt";
-import WelcomeButtons from "../components/WelcomeButtons";
+import React from 'react'
+import { View, SafeAreaView, Text, StyleSheet } from 'react-native'
+import MiniLogo from '../components/MiniLogo'
+import SvgWelcomeArt from '../../assets/svg/arts/SvgWelcomeArt'
+import WelcomeButtons from '../components/WelcomeButtons'
 
 export default props => {
     return (
@@ -11,8 +11,8 @@ export default props => {
             <SvgWelcomeArt style={style.WelcomeArt}/>
             <View style={style.textContainer}>
                 <Text style={style.mainText}>Educação</Text>
-                <Text style={style.subText}>Estude de maneira mais prática{"\n"}e eficiente.</Text>
-                <WelcomeButtons navigation = {props.navigation}/>
+                <Text style={style.subText}>Estude de maneira mais prática{'\n'}e eficiente.</Text>
+                <WelcomeButtons navigation={props.navigation}/>
             </View>
         </SafeAreaView>
     )
@@ -20,32 +20,32 @@ export default props => {
 
 const style = StyleSheet.create({
     App: {
-        backgroundColor: "#006BFF",
+        backgroundColor: '#006BFF',
         flex: 1,
-        paddingTop: "4%",
+        paddingTop: '4%',
     },
 
     WelcomeArt: {
-        alignSelf: "center",
+        alignSelf: 'center',
         marginTop: 120,
     },
 
     textContainer: {
-        marginLeft: "10%",
-        marginRight: "10%"
+        marginLeft: '10%',
+        marginRight: '10%'
     },
 
     mainText: {
         fontSize: 32,
-        fontFamily: "Montserrat-SemiBold",
-        color: "#F5F5F5",
+        fontFamily: 'Montserrat-SemiBold',
+        color: '#F5F5F5',
         marginTop: 88,
     },
     
     subText: {
         fontSize: 14,
-        fontFamily: "Montserrat-Medium",
-        color: "#F5F5F5",
+        fontFamily: 'Montserrat-Medium',
+        color: '#F5F5F5',
         marginTop: 10,
         marginBottom: 40,
     },

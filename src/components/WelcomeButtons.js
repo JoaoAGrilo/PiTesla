@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
 export default props => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate("StudentLogin")}>
+            <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('StudentLogin')}>
                 <Text style={styles.buttonText}>Sou aluno</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.button, styles.buttonTeacher]} onPress={() => props.navigation.navigate("StudentLogin")}>
+            <TouchableOpacity style={[styles.button, styles.buttonTeacher]} onPress={() => props.navigation.navigate('StudentLogin')}>
                 <Text style={[styles.buttonText, styles.buttonTextTeacher]}>Sou professor</Text>
             </TouchableOpacity>
         </View>
