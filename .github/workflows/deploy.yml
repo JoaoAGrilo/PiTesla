@@ -21,10 +21,7 @@ jobs:
 
             - name: 💻 Build Android
               run: |
-                npm run build
-            - name: Install npm dependencies
-              run: |
-                npm install
+                npx react-native run-android --mode=release
 
             # - name: 🐘 Configurar PHP
             #   uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
