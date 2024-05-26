@@ -5,7 +5,7 @@ import ButtonRegular from '../atoms/ButtonRegular'
 import TextInputMail from '../atoms/TextInputMail'
 import TextInputPass from '../atoms/TextInputPass'
 import ButtonReversed from '../atoms/ButtonReversed'
-import { BaseController } from '../../controllers/BaseController'
+import { store } from '../../store'
 
 export default () => {
   const navigation = useNavigation()
@@ -14,20 +14,14 @@ export default () => {
   const { userType } = route.params
 
   const handleLogin = () => {
-    console.log(process.env.BASE_URL)
-    // const baseController = new BaseController()
-    // baseController.get()
-
-    // if (userType === 'student') {
-    //   navigation.navigate('HomeStudent')
-    // } else if (userType === 'teacher') {
-    //   navigation.navigate('HomeTeacher')
-    // }
+    if (userType === 'student') return store.student.login()
+    // navigation.navigate('HomeStudent')
+    // return navigation.navigate('HomeTeacher')
   }
 
   return (
     <View style={style.container}>
-      <TextInputMail/>
+      <TextInputMail placeholder='Email institucional' />
       <TextInputPass/>
       <ButtonRegular onPress={handleLogin}>Entrar</ButtonRegular>
       <ButtonReversed onPress={() => navigation.navigate('Welcome')}>Voltar</ButtonReversed>

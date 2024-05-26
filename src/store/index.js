@@ -1,3 +1,5 @@
-export const store = {
+import { StudentStore } from './services/StudentService'
 
+export const store = {
+  student: StudentStore,
 }
