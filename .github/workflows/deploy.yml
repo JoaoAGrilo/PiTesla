@@ -10,7 +10,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/setup-java@v4
+            - name: '☕ Install Java 17'
+              uses: actions/setup-java@v4
               with:
                 distribution: 'temurin'
                 java-version: '17'
@@ -28,41 +29,13 @@ jobs:
               run: |
                 cd android
                 ./gradlew assembleRelease
-
-            # - name: 🐘 Configurar PHP
-            #   uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
-            #   with:
-            #     php-version: '8.3.6'
       
-            # - name: ✔️ Validade comoposer.json and composer.lock
-            #   run: composer validate --strict
-      
-            # - name: 🔍 Copy .env.example to .env
-            #   run: cp .env.example .env
-      
-            # - name: 🔧 Replace environment variables in .env
-            #   run: |
-            #     sed -i "s/APP_URL=.*/APP_URL=pitesla.juliomanoel.com/g" .env
-            #     sed -i "s/DB_CONNECTION=.*/DB_CONNECTION=${{ secrets.DB_CONNECTION }}/g" .env
-            #     sed -i "s/DB_HOST=.*/DB_HOST=${{ secrets.DB_HOST }}/g" .env
-            #     sed -i "s/DB_PORT=.*/DB_PORT=${{ secrets.DB_PORT }}/g" .env
-            #     sed -i "s/DB_DATABASE=.*/DB_DATABASE=${{ secrets.DB_DATABASE }}/g" .env
-            #     sed -i "s/DB_USERNAME=.*/DB_USERNAME=${{ secrets.DB_USERNAME }}/g" .env
-            #     sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=${{ secrets.DB_PASSWORD }}/g" .env
-            
-            # - name: 🛠 Install Dependencies
-            #   uses: php-actions/composer@v6
-            #   with:
-            #     dev: no
-            #     args: -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-      
-            # - name: 🔑 Generate application key
-            #   run: php artisan key:generate
-      
-            # - name: 📂 Sync files
-            #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-            #   with:
-            #     server: ${{ secrets.FTP_SERVER }}
-            #     username: ${{ secrets.FTP_USERNAME }}
-            #     password: ${{ secrets.FTP_PASSWORD }}
-            #     port: ${{ secrets.FTP_PORT }}
+            - name: 📂 Send APK to Cpanel
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+              with:
+                server: ${{ secrets.FTP_SERVER }}
+                username: ${{ secrets.FTP_USERNAME }}
+                password: ${{ secrets.FTP_PASSWORD }}
+                port: ${{ secrets.FTP_PORT }}
+                local-dir: './android/app/build/outputs/apk/release'
+                server-dir: './public/apk'
