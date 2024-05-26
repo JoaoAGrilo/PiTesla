@@ -32,12 +32,7 @@ jobs:
 
             - name: 💻 Build Android
               run: |
-                ls
-                cd app
-                ls
-                cd build
-                ls
-                cd outputs
+                cd android/app/build/outputs
                 ls
       
             - name: 📂 Send APK to Cpanel
