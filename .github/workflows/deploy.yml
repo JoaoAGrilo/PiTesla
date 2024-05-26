@@ -10,6 +10,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Install Java
+              uses: actions/setup-java@v3
+              with:
+                java-version: 17
+                distribution: adopt
+                cache: gradle
+
             - name: 🚚 Get latest code
               uses: actions/checkout@v4
               with:
@@ -21,7 +28,8 @@ jobs:
 
             - name: 💻 Build Android
               run: |
-                npx react-native run-android --mode=release
+                cd android
+                ./gradlew assembleRelease
 
             # - name: 🐘 Configurar PHP
             #   uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
